@@ -33,4 +33,20 @@ pipeline{
              }
         }
     }
+    post{
+        success{
+          emailext (subject: "CI/Cd pipleline msg",
+                    body: "Code pipeline build successfully",
+                    to : "aadvikpanchal358@gmail.com"
+                    )
+        }
+        failure{
+            
+             emailext (subject: "CI/Cd pipleline msg",
+                    body: "Code pipeline failed",
+                    to : "aadvikpanchal358@gmail.com"
+                    )
+            
+        }
+    }
 }
