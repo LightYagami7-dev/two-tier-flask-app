@@ -1,5 +1,6 @@
 
-pipeline{
+pipeline;{
+    
     
     agent {label "dev"}
     stages{
